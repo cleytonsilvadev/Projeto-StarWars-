@@ -59,6 +59,9 @@ public class Application {
                     kni.add(new GreatMaster());
                     kni.setStatus(true);
                     break;
+                case '3':
+                    battle();
+                    break;
                 case '0':
                     System.out.println("Fim da aplicação! Obrigado... Volte sempre!!!");
                 default:
@@ -83,7 +86,32 @@ public class Application {
         System.out.println("Opções disponíveis:");
         System.out.println("1 - Opções de criação do Padawan.");
         System.out.println("2 - Padawan escolhido pelo cavaleiro e comunicação aos superiores.");
+        System.out.println("3 - Iniciar uma batalha.");
         System.out.println("0 - Sair da aplicação");
         System.out.print("Digite a opção desejada: ");
+    }
+    public static void battle(){
+        Padawan padawan = new Padawan(22,5);
+        DarthBane darth = new DarthBane(22,4);
+        System.out.println("Que comece a batalha!!!");
+        while(padawan.getHP() > 0 && darth.getHP() > 0){
+
+            padawan.printAttPadawan();
+            darth.printAttDarthBane();
+            padawan.movement(darth,padawan);
+            darth.movement(darth,padawan);
+        }
+        if (padawan.getHP() < 0){
+            padawan.setHP(0);
+        }
+        else if (darth.getHP() < 0){
+            darth.setHP(0);
+        }
+        System.out.println(" ");
+        System.out.println("Valores dos Atribubos no final do jogo.");
+        padawan.printAttPadawan();
+        darth.printAttDarthBane();
+        System.out.println(" ");
+        System.out.println("Fim do Combate!!!");
     }
 }
