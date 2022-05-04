@@ -1,19 +1,20 @@
 package decorator;
-import factory.DecoratorJedi;
-import factory.Jedi;
+import model.Jedi;
 
 public class Consular extends DecoratorJedi {
-
     public Consular() {
-
     }
     public Consular(Jedi jedi) {
         super(jedi);
     }
     @Override
+    public void poder() {
+        String imprime = "Aptidão: Consular... \n" +
+                "Diplomata: Vislumbra o futuro, telepatia e persuasão\n" +
+                "Arma: Sabre de luz verde";
+        System.out.println(imprime);
+    }
     public void make() {
         jedi.make();
-        System.out.println("Diplomata: Vislumbra o futuro, telepatia e persuasão");
-        System.out.println("Arma: Sabre de luz verde");
     }
 }

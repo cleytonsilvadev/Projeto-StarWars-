@@ -1,13 +1,17 @@
 package subject;
-import observer.Observer;
+import observer.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Subject {
+    private List <Observer> observers = new ArrayList<>();
 
-    private Observer observers;
     public void add(Observer observer) {
-        observer.add(observer);
+        observers.add(observer);
     }
     public void notifyObservers(boolean status) {
-        observers.update(status);
+        for(Observer obj: observers) {
+            obj.update(status);
+        }
     }
 }

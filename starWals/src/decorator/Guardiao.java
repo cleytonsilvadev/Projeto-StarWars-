@@ -1,12 +1,20 @@
 package decorator;
-public class Guardiao implements Poderes{
+import model.Jedi;
+
+public class Guardiao extends DecoratorJedi{
+    public Guardiao() {
+    }
+    public Guardiao(Jedi jedi) {
+        super(jedi);
+    }
     @Override
     public void poder() {
-        //String retorno = "Guerreiro: Velocidade da força e pulo da força!";
-        System.out.println("Guerreiro: Velocidade da força e pulo da força!");
-        arma();
+        String imprime = "Aptidão: Guardião... \n" +
+                "Guerreiro: Velocidade da força e pulo da força! \n" +
+                "Arma: Sabre de luz azul";
+        System.out.println(imprime);
     }
-    public void arma(){
-        System.out.println("Arma: Sabre de luz azul");
+    public void make(){
+        jedi.make();
     }
 }
