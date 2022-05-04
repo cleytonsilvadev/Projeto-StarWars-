@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Application {
     public static void createPadawan(String name, Jedi jedi){
-        System.out.println("Criando o Padawan: " + name);
+        System.out.println("Criando o Padawan:  " + name);
         jedi.make();
     }
 
