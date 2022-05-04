@@ -8,11 +8,11 @@ public class Consular extends DecoratorJedi {
         super(jedi);
     }
     @Override
-    public void poder() {
-        String imprime = "Aptidão: Consular... \n" +
+    public void power() {
+        String power = "Aptidão: Consular... \n" +
                 "Diplomata: Vislumbra o futuro, telepatia e persuasão\n" +
                 "Arma: Sabre de luz verde";
-        System.out.println(imprime);
+        System.out.println(power);
     }
     public void make() {
         jedi.make();

@@ -13,9 +13,9 @@ public class Padawan implements Jedi, Observer {
     }
     @Override
     public void make() {
-        partyTime();
+        comunication();
     }
-    private void partyTime() {
+    private void comunication() {
         System.out.println("Olá, eu sou o novo Padawan!");
         System.out.println("Quero dar o meu melhor nos treinamentos!!!");
         System.out.println("É um privilégio ser escolhido por um cavaleiro!");

@@ -1,12 +1,12 @@
 package model;
 import observer.Observer;
 
-public class Mestre implements Jedi, Observer {
+public class Master implements Jedi, Observer {
     @Override
     public void make() {
-        partyTime();
+        comunication();
     }
-    private void partyTime() {
+    private void comunication() {
         System.out.println("Mestre...");
         System.out.println("Um de nossos cavaleiros criou um novo Padawan");
         System.out.println("Iniciar treinamentos para a sua formação");

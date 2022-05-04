@@ -1,11 +1,11 @@
 package subject;
 
-public class Cavaleiro extends Subject{
+public class Knight extends Subject{
     private boolean status = false;
 
-    public Cavaleiro() {
+    public Knight() {
     }
-    public Cavaleiro(boolean status) {
+    public Knight(boolean status) {
         this.status = status;
     }
     public boolean getStatus() {
@@ -13,6 +13,6 @@ public class Cavaleiro extends Subject{
     }
     public void setStatus(boolean status) {
         this.status = status;
-        notifyObservers(status);
+        comunicationObservers(status);
     }
 }
