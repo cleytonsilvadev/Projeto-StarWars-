@@ -92,12 +92,12 @@ public class Application {
     }
     public static void battle(){
         Padawan padawan = new Padawan(22,5);
-        DarthBane darth = new DarthBane(22,4);
+        DarthVader darth = new DarthVader(22,4);
         System.out.println("Que comece a batalha!!!");
         while(padawan.getHP() > 0 && darth.getHP() > 0){
 
             padawan.printAttPadawan();
-            darth.printAttDarthBane();
+            darth.printAttDarthVader();
             padawan.movement(darth,padawan);
             darth.movement(darth,padawan);
         }
@@ -110,7 +110,7 @@ public class Application {
         System.out.println(" ");
         System.out.println("Valores dos Atribubos no final do jogo.");
         padawan.printAttPadawan();
-        darth.printAttDarthBane();
+        darth.printAttDarthVader();
         System.out.println(" ");
         System.out.println("Fim do Combate!!!");
     }

@@ -18,8 +18,8 @@ public class Padawan extends  Character implements Jedi, Observer {
         this.setAttack(attack);
     }
     @Override
-    public void attack(Padawan padawan, DarthBane darthBane) {
-        darthBane.setHP(darthBane.getHP() - padawan.getAttack());
+    public void attack(Padawan padawan, DarthVader darthVader) {
+        darthVader.setHP(darthVader.getHP() - padawan.getAttack());
     }
     @Override
     public void make() {
@@ -46,7 +46,7 @@ public class Padawan extends  Character implements Jedi, Observer {
         System.out.println(" ");
         System.out.println(" ");
     }
-    public void movement(DarthBane darthBane, Padawan padawan){
+    public void movement(DarthVader darthVader, Padawan padawan){
 
         Scanner in = new Scanner(System.in);
 
@@ -56,7 +56,7 @@ public class Padawan extends  Character implements Jedi, Observer {
         int selectNumber = in.nextInt();
 
         if (selectNumber == 1) {
-            attack(padawan, darthBane);
+            attack(padawan, darthVader);
             System.out.println("ATACAR");
         }
         System.out.println("");

@@ -24,6 +24,6 @@ public abstract class Character {
     public void setAttack(int attack) {
         this.attack = attack;
     }
-    public abstract void attack(Padawan padawan, DarthBane darthBane);
+    public abstract void attack(Padawan padawan, DarthVader darthVader);
 
 }
