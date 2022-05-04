@@ -39,12 +39,12 @@ public class Application {
                             }
                             else if (numberDraw > 34 && numberDraw <= 67){
                                 jedi = new Consular();
-                                createPadawan("Iori", new Padawan(new Consular()));
+                                createPadawan("Aurora", new Padawan(new Consular()));
                                 jedi.power();
                             }
                             else if (numberDraw > 68 && numberDraw <= 100){
                                 jedi = new Sentinel();
-                                createPadawan("Karl", new Padawan(new Sentinel()));
+                                createPadawan("Tempestade", new Padawan(new Sentinel()));
                                 jedi.power();
                             }
                         }
